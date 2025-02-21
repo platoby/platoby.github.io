@@ -3,10 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <title>Plato info block</title>
+    <style>
+        .alert {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1rem;
+            background-color: #ffffff;
+            color: #ee2951;
+        }    
+        
+        .alert-title {
+            font-size: 1.75rem;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        .alert-description {
+            margin: 0;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .alert-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>
-        Hello 
-    </h1>
+    <div class="alert" >
+        <p class="alert-title">
+            Изменение в работе скалодрома
+        </p>
+        <p class="alert-description">
+            Четверг 07.07 работаем до 16:00 <br/>
+            Пятница - зал закрыт <br/>
+            В субботу проходят <a href="https://docs.google.com/forms/d/e/1FAIpQLSe2hMTmwpIPhjuEwyVKIHY-ujo_moNF0pS029_xngM2xWgdVg/viewform" target="_blank">соревнования "BOULDER COMBAT"</a><br/>
+            Воскресенье - открыты с 12:00
+        </p>
+    </div>
 </body>
 </html>
