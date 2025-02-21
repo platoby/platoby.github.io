@@ -4,6 +4,23 @@
     <meta charset="UTF-8">
     <title>Plato info block</title>
     <style>
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'finlandica', sans-serif;
+            font-weight: 300;
+            font-size: 16px;
+            color: #1D1D1D;
+            min-width: 275px;
+        }
+
+        a {
+            color: #1D1D1D;
+        }
+
         .alert {
             display: flex;
             flex-direction: column;
@@ -11,18 +28,18 @@
             padding: 1rem;
             background-color: #ffffff;
             color: #ee2951;
-        }    
-        
+        }
+
         .alert-title {
             font-size: 1.75rem;
             font-weight: bold;
             text-align: center;
         }
-        
+
         .alert-description {
             margin: 0;
         }
-        
+
         @media screen and (max-width: 768px) {
             .alert-title {
                 font-size: 1.25rem;
@@ -31,16 +48,18 @@
     </style>
 </head>
 <body>
-    <div class="alert" >
-        <p class="alert-title">
-            Изменение в работе скалодрома
-        </p>
-        <p class="alert-description">
-            Четверг 07.07 работаем до 16:00 <br/>
-            Пятница - зал закрыт <br/>
-            В субботу проходят <a href="https://docs.google.com/forms/d/e/1FAIpQLSe2hMTmwpIPhjuEwyVKIHY-ujo_moNF0pS029_xngM2xWgdVg/viewform" target="_blank">соревнования "BOULDER COMBAT"</a><br/>
-            Воскресенье - открыты с 12:00
-        </p>
-    </div>
+<div class="alert">
+    <p class="alert-title">
+        Изменение в работе скалодрома
+    </p>
+    <p class="alert-description">
+        Четверг 07.07 работаем до 16:00 <br/>
+        Пятница - зал закрыт <br/>
+        В субботу проходят <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSe2hMTmwpIPhjuEwyVKIHY-ujo_moNF0pS029_xngM2xWgdVg/viewform"
+            target="_blank">соревнования "BOULDER COMBAT"</a><br/>
+        Воскресенье - открыты с 12:00
+    </p>
+</div>
 </body>
 </html>
