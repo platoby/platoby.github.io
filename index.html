@@ -3,51 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Plato info block</title>
-    <style>
-
-        html, body {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            font-family: 'finlandica', sans-serif;
-            font-weight: 300;
-            font-size: 16px;
-            color: #1D1D1D;
-            min-width: 275px;
-        }
-
-        a {
-            color: #1D1D1D;
-        }
-
-        .alert {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 1rem;
-            background-color: #ffffff;
-            color: #ee2951;
-        }
-
-        .alert-title {
-            font-size: 1.75rem;
-            font-weight: bold;
-            text-align: center;
-        }
-
-        .alert-description {
-            margin: 0;
-        }
-
-        @media screen and (max-width: 768px) {
-            .alert-title {
-                font-size: 1.25rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css"/>
 </head>
-<body>
+<body onload="parent?.postMessage({ platoHeight: document.body.scrollHeight });">
 <div class="alert">
     <p class="alert-title">
         Изменение в работе скалодрома
