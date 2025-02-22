@@ -20,9 +20,9 @@
     </p>
 </div>
 <script>
-  parent?.postMessage({ platoHeight: document.querySelector('.alert').scrollHeight });
+  parent?.postMessage({ platoHeight: document.querySelector('.alert').scrollHeight }, '*');
   setInterval(() => {
-    parent?.postMessage({ platoHeight: document.querySelector('.alert').scrollHeight })
+    parent?.postMessage({ platoHeight: document.querySelector('.alert').scrollHeight }, '*')
   }, 5000);
 </script>
 </body>
