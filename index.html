@@ -24,7 +24,8 @@
   function sendHeight() {
     const alert = document.querySelector('.alert');
     let height = alert?.scrollHeight || 0;
-    if (alert?.dataset?.expire && (new Date().getTime() > new (alert?.dataset?.expire))) {
+    const expireDate = new Date(alert?.dataset?.expire);
+    if (!isNaN(expireDate) && (new Date().getTime() > expireDate.getTime())) {
       height = 0;
       document.body.removeChild(alert);
     }
