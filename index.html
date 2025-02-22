@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css"/>
 </head>
 <body >
-<div class="alert">
+<div class="alert" data-expire="22.02.2025">
     <p class="alert-title">
         Изменение в работе скалодрома
     </p>
@@ -22,7 +22,13 @@
 <script>
 
   function sendHeight() {
-    parent?.postMessage({ platoHeight: document.querySelector('.alert')?.scrollHeight || 0 }, '*');
+    const alert = document.querySelector('.alert');
+    let height = alert?.scrollHeight || 0;
+    if (alert?.dataset?.expire && (new Date().getTime() > new (alert?.dataset?.expire))) {
+      height = 0;
+      document.body.removeChild(alert);
+    }
+    parent?.postMessage({ platoHeight: height}, '*');
   }
 
   sendHeight();
