@@ -5,7 +5,7 @@
     <title>Plato info block</title>
     <link rel="stylesheet" href="style.css"/>
 </head>
-<body onload="parent?.postMessage({ platoHeight: document.body.scrollHeight });">
+<body >
 <div class="alert">
     <p class="alert-title">
         Изменение в работе скалодрома
@@ -19,5 +19,11 @@
         Воскресенье - открыты с 12:00
     </p>
 </div>
+<script>
+  parent?.postMessage({ platoHeight: document.querySelector('.alert').scrollHeight });
+  setInterval(() => {
+    parent?.postMessage({ platoHeight: document.querySelector('.alert').scrollHeight })
+  }, 5000);
+</script>
 </body>
 </html>

@@ -14,13 +14,18 @@ a {
     color: #1D1D1D;
 }
 
+p {
+    margin: 0.5rem 0
+}
+
 .alert {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1rem;
+    padding: 1rem 1rem 1.5rem 1rem;
     background-color: #ffffff;
     color: #ee2951;
+    max-height: 400px;
 }
 
 .alert-title {
@@ -36,5 +41,9 @@ a {
 @media screen and (max-width: 768px) {
     .alert-title {
         font-size: 1.25rem;
+    }
+
+    p {
+        font-size: 0.875rem;
     }
 }
